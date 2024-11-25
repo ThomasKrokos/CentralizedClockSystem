@@ -20,7 +20,6 @@ class Process(object):
     def __init__(self, pid):
         self.microsecond_offset = random.randint(0, 200) - 100
         self.local_clock = datetime.combine(datetime.now().date(), datetime.now().time())        
-        print("WE GOT HEREINIT")
         
         self.local_clock = self.local_clock + timedelta(microseconds=self.microsecond_offset) 
         self.local_time = self.local_clock.time()
